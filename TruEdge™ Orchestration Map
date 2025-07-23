@@ -1,0 +1,61 @@
+# TruEdge™ Orchestration Map — v1.0
+
+This diagram outlines how each TruEdge repository connects within the modular ecosystem. It shows signal flow, drop injection, regime sync, and orchestration shell coordination.
+
+## 🔄 Signal Flow Overview
+
+TruEdge_Overlays
+    └──▶ TrendOverlay_v2.1
+    └──▶ VolatilityOverlay_v1.8
+        └──▶ ThemeBridge.ts
+            └──▶ FusionMaster.ts (OrchestrationShells)
+
+TruEdge_Diagnostics
+    └──▶ PatternScoreEngine.ts
+    └──▶ CockpitView_Diagnostics.ts
+        └──▶ CockpitView.ts (OrchestrationShells)
+
+TruEdge_DropVault
+    └──▶ HarmonicPulse_Drop_A.ts
+    └──▶ LauncherShell_Drop_X.ts
+        └──▶ DropManager.ts (CompilerSuite)
+            └──▶ FusionMaster.ts
+
+TruEdge_CompilerSuite
+    └──▶ TruScriptCompiler.ts
+    └──▶ GitHubPresetBridge.ts
+        └──▶ DropManager.ts
+            └──▶ FusionMaster.ts
+
+TruEdge_TradePlatform
+    └──▶ ExecutionCore.ts
+    └──▶ ScannerColumn.ts
+        └──▶ LauncherShell.ts (OrchestrationShells)
+
+truedge-studio
+    └──▶ PatternScoreEngine staging
+    └──▶ TierHUD composition
+        └──▶ CockpitView.ts
+
+TruEdge_ReadmeKit
+    └──▶ README_Scaffold_Shells.md
+    └──▶ README_Scaffold_DropVault.md
+        └──▶ Used across all repos
+
+## 🔧 Regime Sync Path
+
+RegimeBridge.ts
+    ◀── Manual Input
+    ◀── Drop Override
+    └──▶ FusionMaster.ts
+        └──▶ All modules sync via regimeState
+
+## 🧩 Orchestration Shells
+
+FusionMaster.ts
+    └──▶ Coordinates overlays, diagnostics, drops
+LauncherShell.ts
+
+    └──▶ Routes scan/export logic
+CockpitView.ts
+    └──▶ Displays diagnostics and regime state
