@@ -31,3 +31,4 @@ Want to remix a module, fork a shell, or contribute a drop? Welcome aboard. This
 ## 📝 License
 
 MIT — remix, extend, and build your legacy.
+📎 View the full orchestration diagram: [Orchestration_Map.md](Orchestration_Map.md)
