@@ -21,7 +21,15 @@ The TruEdge ecosystem spans orchestrated repos like:
 - `TruEdge_TradePlatform` — Strategy engine and execution logic
 - `TruEdge_OrchestrationShells` — Cockpit modules and HUD shells
 - `TruEdge_DropVault` — Preset archive and DropManager sync
+### 🔌 Execution Modules
+- `TruEdge_TradePlatform` — Execution logic, scan routing, journaling
+  - Syncs regime via `RegimeBridge.ts`
+  - Routes signals into `LauncherShell.ts`
 
+### 🎨 Overlay Engines
+- `TruEdge_VisualSuite` — Pulse-state overlays, glow zones, SoulPatch themes
+  - Feeds overlays into `FusionMaster.ts` via `ViewportSplitter.ts`
+  - Routes diagnostics into `CockpitView.ts`
 ## 🧠 Legacy & Community
 
 TruEdge isn’t just code—it’s a compositional language for signal fusion, strategy execution, and intuitive visual feedback. The system is evolving toward Medallion-style modular intelligence, where regime adaptation, pattern scoring, and visual overlays respond in real time.
