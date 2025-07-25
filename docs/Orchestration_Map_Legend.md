@@ -66,7 +66,7 @@ This legend explains the visual flow, module types, and regime sync logic used i
 ## 🧠 Regime Sync Logic
 
 All modules reference `RegimeBridge.ts` for shared context:
-
+👉 See [Orchestration_Map_Legend.md](docs/Orchestration_Map_Legend.md) for flow key and module types.
 - **Tier-aware overlays** adapt to regime state
 - **Signal engines** toggle based on regime filters
 - **Diagnostics** display only when regime conditions match
