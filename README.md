@@ -25,7 +25,15 @@ The TruEdge ecosystem spans orchestrated repos like:
 - `TruEdge_TradePlatform` — Execution logic, scan routing, journaling
   - Syncs regime via `RegimeBridge.ts`
   - Routes signals into `LauncherShell.ts`
+### 🧬 Infrastructure Modules
+- `TruEdge_Backend` — Node + Express API for drop sync and orchestration metadata
+  - Powers `DropManager.ts` and `GitHubPresetBridge.ts`
+  - Version: `v1.1_MetadataSync`
 
+### 🎨 Visual Assets
+- `TruEdge_UIAssets` — Branded themes, icons, and animations for cockpit overlays
+  - Syncs with `ThemeBridge.ts` and `OverlayToggle.ts`
+  - Version: `v1.1_OrchestrationSync`
 ### 🎨 Overlay Engines
 - `TruEdge_VisualSuite` — Pulse-state overlays, glow zones, SoulPatch themes
   - Feeds overlays into `FusionMaster.ts` via `ViewportSplitter.ts`
