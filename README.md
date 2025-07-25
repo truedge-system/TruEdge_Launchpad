@@ -39,7 +39,57 @@ The TruEdge ecosystem spans orchestrated repos like:
   - Feeds overlays into `FusionMaster.ts` via `ViewportSplitter.ts`
   - Routes diagnostics into `CockpitView.ts`
 ## 🧠 Legacy & Community
+# TruEdge™ Orchestration Map — RealSuite v1.0
 
+This map outlines how each module in the TruEdge-RealSuite monorepo fuses into a unified orchestration shell. Modules are toggle-safe, regime-synced, and designed for scan/export clarity.
+
+---
+
+## 🔧 Signal Flow
+
+1. `TruEdge_TradePlatform`
+   → `LauncherShell.ts` (scan/export)
+   → `FusionMaster.ts` (signal fusion)
+
+2. `TruEdge_VisualSuite`
+   → `ViewportSplitter.ts` → `CockpitView.ts`
+   → `FusionMaster.ts` (overlay sync)
+
+3. `TruEdge_CompilerSuite`
+   → `DropManager.ts` → `FusionMaster.ts`
+   → `GitHubPresetBridge.ts` → `DropVault`
+
+4. `TruEdge_Studio`
+   → `CockpitView.ts` (layout testing)
+   → `FusionMaster.ts` (live preview)
+
+5. `TruEdge_Backend`
+   → `DropManager.ts` (metadata sync)
+   → `CockpitView.ts` (diagnostic routing)
+
+6. `TruEdge_UIAssets`
+   → `ThemeBridge.ts` → `CockpitView.ts`
+   → `FusionMaster.ts` (visual overlays)
+
+---
+
+## 🧠 Regime Sync
+
+- All modules reference `RegimeBridge.ts`
+- Shared context for overlays, diagnostics, and execution logic
+
+---
+
+## 🧩 Deployment Grid
+
+| Module               | Role                        | Sync Target         | Version Tag             |
+|----------------------|-----------------------------|---------------------|-------------------------|
+| TradePlatform         | Execution + Journaling      | LauncherShell.ts    | `v1.1_ScanSync`         |
+| VisualSuite           | Overlay + Pulse Logic       | FusionMaster.ts     | `v1.1_OverlaySync`      |
+| CompilerSuite         | Drop Compiler + Manager     | FusionMaster.ts     | `v1.1_DropSync`         |
+| Studio                | Layout Testing + Preview    | CockpitView.ts      | `v1.1_LivePreview`      |
+| Backend               | API + Metadata Sync         | DropManager.ts      | `v1.1_MetadataSync`     |
+| UIAssets              | Themes + Icons + Animations | ThemeBridge.ts      | `v1.1_OrchestrationSync`|
 TruEdge isn’t just code—it’s a compositional language for signal fusion, strategy execution, and intuitive visual feedback. The system is evolving toward Medallion-style modular intelligence, where regime adaptation, pattern scoring, and visual overlays respond in real time.
 
 Want to remix a module, fork a shell, or contribute a drop? Welcome aboard. This system lives, breathes, and evolves by orchestration.
