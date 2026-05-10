@@ -98,3 +98,17 @@ Want to remix a module, fork a shell, or contribute a drop? Welcome aboard. This
 
 MIT — remix, extend, and build your legacy.
 📎 View the full orchestration diagram: [Orchestration_Map.md](Orchestration_Map.md)
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"
