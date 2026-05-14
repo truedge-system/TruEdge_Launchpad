@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "truedge-launchpad",
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "functions": {
+    "api/**/*.js": { "maxDuration": 120 }
+  }
+}
